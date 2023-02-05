@@ -5,7 +5,7 @@
 .. library. However it is necessary in order to be able to quote its items in the
 .. documentation.
 
-.. image:: _static/pygame_menu.png
+.. image:: _static/logo.png
     :scale: 35%
     :align: center
 
@@ -16,58 +16,28 @@
 First steps
 ===========
 
-Making games using :py:mod:`pygame` is really cool, but most games (or applications)
-require end-user configuration. Creating complex GUI objects to display a menu can
-be painful. That was why :py:mod:`pygame-menu` was designed.
+Making games using Unreal Engine is really cool, but when you want to `mod <https://en.wikipedia.org/wiki/Video_game_modding>`_ a game, it can be harder.
 
-Here is a simple example of how to create a menu with :py:mod:`pygame-menu`
-(the code is available in `pygame_menu.examples.simple.py <https://github.com/ppizarror/pygame-menu/tree/master/pygame_menu/examples/simple.py>`_):
+To mod a game, you need to extract the game files. To extract the game files, you need Unreal Engine's UnrealPak. To use Unreal Engine's UnrealPak, you need to open it in Windows's CMD.
 
-1. Import the required libraries
+That's where **UnrealPak-tool** do de job: It can extract a .pak file to a folder that will be chosen by the user. All in one program with a easy-to-use interface.
 
-.. code-block:: python
+Here is a tutorial of how to create a menu with **UnrealPak-tool** :
 
-    import pygame
-    import pygame_menu
+1. Select UnrealPak-tool's version to install
 
-2. Initialize pygame
-
-.. code-block:: python
-
-    pygame.init()
-    surface = pygame.display.set_mode((600, 400))
-
-3. Make your menu
-
-.. code-block:: python
-
-    def set_difficulty(value, difficulty):
-        # Do the job here !
-        pass
-
-    def start_the_game():
-        # Do the job here !
-        pass
-
-    menu = pygame_menu.Menu('Welcome', 400, 300,
-                           theme=pygame_menu.themes.THEME_BLUE)
-
-    menu.add.text_input('Name :', default='John Doe')
-    menu.add.selector('Difficulty :', [('Hard', 1), ('Easy', 2)], onchange=set_difficulty)
-    menu.add.button('Play', start_the_game)
-    menu.add.button('Quit', pygame_menu.events.EXIT)
-
-4. Run your menu
-
-.. code-block:: python
-
-    menu.mainloop(surface)
-
-.. figure:: _static/first_steps.png
-    :scale: 40%
+.. image:: ../_static/select_version_to_install.gif
     :align: center
+    :alt: Select UnrealPak-tool's version to install
+    :width: 600
 
-    Tadada... !!! Such a beautiful menu ＼(^o^)／
+2. Select UnrealPak-tool's mode to install
+
+
+.. image:: ../_static/select_mode_to_install.gif
+    :align: center
+    :alt: Select UnrealPak-tool's mode to install
+    :width: 600
 
 **Interested in** :ref:`going deeper into menu design <Creating menus>` **?**
 
